@@ -2,8 +2,6 @@
 
 A **production-ready, single-page Flutter Web portfolio** built with clean architecture, Material 3 design, and responsive layouts. 
 
-Perfect for developers, designers, and tech professionals to showcase their work to recruiters and clients.
-
 ---
 
 ## ✨ Features

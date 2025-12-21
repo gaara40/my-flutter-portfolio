@@ -16,6 +16,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+final projectsKey = GlobalKey();
+final contactKey = GlobalKey();
+
 class _HomePageState extends State<HomePage> {
   late final ScrollController _scrollController;
 
@@ -30,21 +33,24 @@ class _HomePageState extends State<HomePage> {
     _scrollController.dispose();
     super.dispose();
   }
+  // Scroll to specific sections using global keys
+  void scrollToSection(GlobalKey key) {
+    final context = key.currentContext;
+    if (context != null) {
+      Scrollable.ensureVisible(
+        context,
+        duration: const Duration(milliseconds: 800),
+        curve: Curves.easeInOutCubic,
+      );
+    }
+  }
 
   void _scrollToProjects() {
-    _scrollController.animateTo(
-      _scrollController.position.maxScrollExtent * 0.40,
-      duration: const Duration(milliseconds: 800),
-      curve: Curves.easeInOutCubic,
-    );
+    scrollToSection(projectsKey);
   }
 
   void _scrollToContact() {
-    _scrollController.animateTo(
-      _scrollController.position.maxScrollExtent,
-      duration: const Duration(milliseconds: 800),
-      curve: Curves.easeInOutCubic,
-    );
+    scrollToSection(contactKey);
   }
 
   @override
@@ -60,9 +66,9 @@ class _HomePageState extends State<HomePage> {
             ),
             const AboutSection(),
             const SkillsSection(),
-            const ProjectsSection(),
+            ProjectsSection(key: projectsKey),
             const ResumeSection(),
-            const ContactSection(),
+            ContactSection(key: contactKey),
           ],
         ),
       ),

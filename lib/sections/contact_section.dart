@@ -5,8 +5,8 @@ import '../widgets/section_heading.dart';
 /// Contact section displaying email, LinkedIn, and GitHub links.
 /// Simple, clean layout with clear CTAs for reaching out.
 class ContactSection extends StatelessWidget {
-  const ContactSection();
-
+  const ContactSection({super.key});
+  
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;

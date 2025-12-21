@@ -8,7 +8,7 @@ import '../models/project_model.dart';
 /// Uses ProjectData to manage project information separate from UI.
 /// Responsive grid that adapts to screen size.
 class ProjectsSection extends StatelessWidget {
-  const ProjectsSection();
+   const ProjectsSection({super.key});
 
   @override
   Widget build(BuildContext context) {

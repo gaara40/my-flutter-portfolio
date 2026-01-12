@@ -52,9 +52,9 @@ Change in: `lib/theme/app_theme.dart` (lines 8-12)
 
 ```dart
 AppTheme.spacingXS   = 8px
-AppTheme.spacingSM   = 12px
-AppTheme.spacingMD   = 16px   ← Most common
-AppTheme.spacingLG   = 24px
+AppTheme.spacingS   = 12px
+AppTheme.spacingM   = 16px   ← Most common
+AppTheme.spacingL   = 24px
 AppTheme.spacingXL   = 32px
 AppTheme.spacingXXL  = 48px
 ```

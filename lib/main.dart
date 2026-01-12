@@ -7,8 +7,6 @@ void main() {
 }
 
 /// Root widget of the portfolio application.
-/// Configures theme and calls the home page.
-/// Responsibility: App setup ONLY.
 class PortfolioApp extends StatelessWidget {
   const PortfolioApp();
 

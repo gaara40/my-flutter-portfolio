@@ -18,7 +18,7 @@ class HeroSection extends StatelessWidget {
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(
-          horizontal: isMobile ? AppTheme.spacingLG : AppTheme.spacingXXL,
+          horizontal: isMobile ? AppTheme.spacingL : AppTheme.spacingXXL,
           vertical: isMobile ? AppTheme.spacingXXL : 100,
         ),
         color: Theme.of(context).scaffoldBackgroundColor,
@@ -42,7 +42,7 @@ class HeroSection extends StatelessWidget {
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
-                const SizedBox(height: AppTheme.spacingLG),
+                const SizedBox(height: AppTheme.spacingL),
 
                 // Name
                 Text(
@@ -50,7 +50,7 @@ class HeroSection extends StatelessWidget {
                   style: Theme.of(context).textTheme.displayLarge,
                   textAlign: isMobile ? TextAlign.center : TextAlign.left,
                 ),
-                const SizedBox(height: AppTheme.spacingMD),
+                const SizedBox(height: AppTheme.spacingM),
 
                 // Role
                 Text(
@@ -86,7 +86,7 @@ class HeroSection extends StatelessWidget {
                       icon: const Icon(Icons.work_outline),
                       label: const Text('View Projects'),
                     ),
-                    const SizedBox(width: AppTheme.spacingMD),
+                    const SizedBox(width: AppTheme.spacingM),
                     OutlinedButton.icon(
                       onPressed: onContactMe,
                       icon: const Icon(Icons.mail_outline),

@@ -14,7 +14,7 @@ class AboutSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? AppTheme.spacingLG : AppTheme.spacingXXL,
+        horizontal: isMobile ? AppTheme.spacingL : AppTheme.spacingXXL,
         vertical: AppTheme.spacingXXL,
       ),
       color: Theme.of(context).colorScheme.surface,
@@ -69,12 +69,12 @@ class AboutSection extends StatelessWidget {
 
         style: Theme.of(context).textTheme.bodyLarge,
       ),
-      const SizedBox(height: AppTheme.spacingLG),
+      const SizedBox(height: AppTheme.spacingL),
       Text(
         'My interest in development started with curiosity about how products are built and scaled. Over time, I’ve worked on real-world applications where maintainability, performance, and collaboration matter just as much as features. I value writing clear code, thinking through edge cases, and building things that are easy to evolve over time.',
         style: Theme.of(context).textTheme.bodyLarge,
       ),
-      // const SizedBox(height: AppTheme.spacingLG),
+      // const SizedBox(height: AppTheme.spacingL),
       // Row(
       //   mainAxisSize: MainAxisSize.min,
       //   children: [

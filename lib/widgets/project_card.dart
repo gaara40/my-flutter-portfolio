@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/helpers/url_launcher.dart';
 import '../models/project_model.dart';
 import '../theme/app_theme.dart';
 import 'skill_chip.dart';
@@ -9,12 +10,12 @@ import 'skill_chip.dart';
 class ProjectCard extends StatelessWidget {
   final ProjectModel project;
 
-  const ProjectCard({required this.project});
+  const ProjectCard({super.key, required this.project});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(AppTheme.spacingLG),
+      padding: const EdgeInsets.all(AppTheme.spacingL),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
@@ -27,37 +28,36 @@ class ProjectCard extends StatelessWidget {
         children: [
           // Project Title
           Text(project.title, style: Theme.of(context).textTheme.headlineSmall),
-          const SizedBox(height: AppTheme.spacingMD),
+          const SizedBox(height: AppTheme.spacingM),
 
           // Project Description
           Text(
             project.description,
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          const SizedBox(height: AppTheme.spacingLG),
+          const SizedBox(height: AppTheme.spacingL),
 
           // Technologies
           Wrap(
-            spacing: AppTheme.spacingSM,
-            runSpacing: AppTheme.spacingSM,
+            spacing: AppTheme.spacingS,
+            runSpacing: AppTheme.spacingS,
             children: project.technologies
                 .map((tech) => SkillChip(label: tech))
                 .toList(),
           ),
-          const SizedBox(height: AppTheme.spacingLG),
+          const SizedBox(height: AppTheme.spacingL),
 
           // Buttons
           Wrap(
-            spacing: AppTheme.spacingMD,
-            runSpacing: AppTheme.spacingMD,
+            spacing: AppTheme.spacingM,
+            runSpacing: AppTheme.spacingM,
             children: [
               if (project.githubUrl != null)
                 SizedBox(
                   height: 44,
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      // In a real app, use url_launcher package
-                      // launchUrl(Uri.parse(project.githubUrl!));
+                      urlLauncher(project.githubUrl!);
                     },
                     icon: const Icon(Icons.code),
                     label: const Text('GitHub'),

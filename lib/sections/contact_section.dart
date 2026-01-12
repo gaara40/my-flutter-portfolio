@@ -21,7 +21,7 @@ class ContactSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? AppTheme.spacingLG : AppTheme.spacingXXL,
+        horizontal: isMobile ? AppTheme.spacingL : AppTheme.spacingXXL,
         vertical: AppTheme.spacingXXL,
       ),
       color: Theme.of(context).colorScheme.surface,
@@ -124,7 +124,7 @@ class ContactSection extends StatelessWidget {
     String githubUrl,
   ) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         _buildContactMethod(
           context,
@@ -160,37 +160,36 @@ class ContactSection extends StatelessWidget {
     String value,
     String url,
   ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Center(
-          child: Row(
+    return IntrinsicWidth(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(icon, color: Theme.of(context).primaryColor, size: 24),
-              const SizedBox(width: AppTheme.spacingMD),
+              Icon(icon, color: Theme.of(context).primaryColor, size: 22),
+              const SizedBox(width: 10),
               Text(label, style: Theme.of(context).textTheme.headlineSmall),
             ],
           ),
-        ),
-        const SizedBox(height: AppTheme.spacingSM),
-        MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: GestureDetector(
-            onTap: () {
-              urlLauncher(url);
-            },
-            child: Text(
-              value,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context).primaryColor,
-                decoration: TextDecoration.underline,
+          const SizedBox(height: AppTheme.spacingS),
+          MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: GestureDetector(
+              onTap: () => urlLauncher(url),
+              child: Text(
+                value,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).primaryColor,
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

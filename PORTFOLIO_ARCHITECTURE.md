@@ -75,9 +75,9 @@ Each section is independent and can be modified without affecting others.
 ### Spacing Scale
 ```dart
 spacingXS   = 8px
-spacingSM   = 12px
-spacingMD   = 16px
-spacingLG   = 24px
+spacingS   = 12px
+spacingM   = 16px
+spacingL   = 24px
 spacingXL   = 32px
 spacingXXL  = 48px
 ```

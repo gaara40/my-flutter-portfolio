@@ -132,9 +132,9 @@ Text Secondary:  #B0B0B0 (Gray)
 ### Spacing Scale
 ```dart
 XS:   8px   spacingXS
-SM:  12px   spacingSM
-MD:  16px   spacingMD
-LG:  24px   spacingLG
+SM:  12px   spacingS
+MD:  16px   spacingM
+LG:  24px   spacingL
 XL:  32px   spacingXL
 XXL: 48px   spacingXXL
 ```

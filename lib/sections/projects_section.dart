@@ -8,7 +8,7 @@ import '../models/project_model.dart';
 /// Uses ProjectData to manage project information separate from UI.
 /// Responsive grid that adapts to screen size.
 class ProjectsSection extends StatelessWidget {
-   const ProjectsSection({super.key});
+  const ProjectsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class ProjectsSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? AppTheme.spacingLG : AppTheme.spacingXXL,
+        horizontal: isMobile ? AppTheme.spacingL : AppTheme.spacingXXL,
         vertical: AppTheme.spacingXXL,
       ),
       color: Theme.of(context).colorScheme.surface,
@@ -49,8 +49,8 @@ class ProjectsSection extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: AppTheme.spacingLG,
-        mainAxisSpacing: AppTheme.spacingLG,
+        crossAxisSpacing: AppTheme.spacingL,
+        mainAxisSpacing: AppTheme.spacingL,
         childAspectRatio: 1.0,
       ),
       itemCount: ProjectData.projects.length,
@@ -66,7 +66,7 @@ class ProjectsSection extends StatelessWidget {
       children: List.generate(
         ProjectData.projects.length,
         (index) => Padding(
-          padding: const EdgeInsets.only(bottom: AppTheme.spacingLG),
+          padding: const EdgeInsets.only(bottom: AppTheme.spacingL),
           child: ProjectCard(project: ProjectData.projects[index]),
         ),
       ),

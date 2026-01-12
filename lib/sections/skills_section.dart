@@ -37,7 +37,7 @@ class SkillsSection extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: MediaQuery.of(context).size.width < 768
-            ? AppTheme.spacingLG
+            ? AppTheme.spacingL
             : AppTheme.spacingXXL,
         vertical: AppTheme.spacingXXL,
       ),
@@ -55,8 +55,8 @@ class SkillsSection extends StatelessWidget {
               const SizedBox(height: AppTheme.spacingXXL),
               // Flat list of all skills
               Wrap(
-                spacing: AppTheme.spacingMD,
-                runSpacing: AppTheme.spacingMD,
+                spacing: AppTheme.spacingM,
+                runSpacing: AppTheme.spacingM,
                 children: skills
                     .map(
                       (skill) => SkillChip(label: skill, isHighlighted: false),

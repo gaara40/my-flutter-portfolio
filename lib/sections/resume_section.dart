@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/helpers/url_launcher.dart';
 import '../theme/app_theme.dart';
 import '../widgets/section_heading.dart';
 
@@ -11,10 +12,13 @@ class ResumeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
 
+    final pdfUrl =
+        'https://raw.githubusercontent.com/gaara40/my-flutter-portfolio/31039aa92164d27457d27e69139d09bbb9df6cc9/assets/pdf/Pravinkumar_Resume1.pdf';
+
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? AppTheme.spacingLG : AppTheme.spacingXXL,
+        horizontal: isMobile ? AppTheme.spacingL : AppTheme.spacingXXL,
         vertical: AppTheme.spacingXXL,
       ),
       color: Theme.of(context).scaffoldBackgroundColor,
@@ -47,7 +51,7 @@ class ResumeSection extends StatelessWidget {
                       'Download My Resume',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
-                    const SizedBox(height: AppTheme.spacingMD),
+                    const SizedBox(height: AppTheme.spacingM),
                     Text(
                       'Get a comprehensive overview of my professional experience, education, and key accomplishments.',
                       style: Theme.of(context).textTheme.bodyLarge,
@@ -57,8 +61,7 @@ class ResumeSection extends StatelessWidget {
                     // Download button
                     ElevatedButton.icon(
                       onPressed: () {
-                        // In a real app, use url_launcher to download PDF
-                        // launchUrl(Uri.parse('https://example.com/resume.pdf'));
+                        urlLauncher(pdfUrl);
                       },
                       icon: const Icon(Icons.download),
                       label: const Text('Download Resume (PDF)'),
@@ -77,19 +80,19 @@ class ResumeSection extends StatelessWidget {
                       'Quick Facts',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
-                    const SizedBox(height: AppTheme.spacingLG),
+                    const SizedBox(height: AppTheme.spacingL),
                     _buildQuickFact(
                       context,
                       'Experience',
                       '2+ years in Flutter & Android development',
                     ),
-                    const SizedBox(height: AppTheme.spacingMD),
+                    const SizedBox(height: AppTheme.spacingM),
                     _buildQuickFact(
                       context,
                       'Education',
                       'Bachelor\'s in Information Technology',
                     ),
-                    const SizedBox(height: AppTheme.spacingMD),
+                    const SizedBox(height: AppTheme.spacingM),
                     _buildQuickFact(
                       context,
                       'Specialization',

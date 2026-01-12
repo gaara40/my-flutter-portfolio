@@ -14,7 +14,7 @@ Text(
   'Jane Anderson',
   style: Theme.of(context).textTheme.displayLarge,
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 Text(
   'React & Web Developer',
   style: Theme.of(context).textTheme.displaySmall?.copyWith(
@@ -42,7 +42,7 @@ Text(
   'Alex Chen',
   style: Theme.of(context).textTheme.displayLarge,
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 Text(
   'Full-Stack Developer',
   style: Theme.of(context).textTheme.displaySmall?.copyWith(
@@ -74,12 +74,12 @@ List<Widget> _buildContent(BuildContext context) {
       'I transitioned to tech from a design background, bringing a unique perspective to problem-solving. My journey has been about continuous learning and building products that users love.',
       style: Theme.of(context).textTheme.bodyLarge,
     ),
-    const SizedBox(height: AppTheme.spacingLG),
+    const SizedBox(height: AppTheme.spacingL),
     Text(
       'What started as learning to code for fun evolved into a passion for building mobile applications. I\'ve worked with startups in fintech, healthcare, and e-commerce, always focusing on delivering quality software.',
       style: Theme.of(context).textTheme.bodyLarge,
     ),
-    const SizedBox(height: AppTheme.spacingLG),
+    const SizedBox(height: AppTheme.spacingL),
     Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -116,12 +116,12 @@ Widget _buildTechStack(BuildContext context) {
             entry.key,
             style: Theme.of(context).textTheme.labelLarge,
           ),
-          const SizedBox(height: AppTheme.spacingSM),
+          const SizedBox(height: AppTheme.spacingS),
           Text(
             entry.value.join(', '),
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          const SizedBox(height: AppTheme.spacingLG),
+          const SizedBox(height: AppTheme.spacingL),
         ],
       );
     }).toList(),
@@ -270,19 +270,19 @@ _buildQuickFact(
   'Experience',
   'Senior Developer (3y), Mid Developer (2y), Junior Developer (1y)',
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 _buildQuickFact(
   context,
   'Education',
   'BS Computer Science, Online Certifications (Google, Coursera)',
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 _buildQuickFact(
   context,
   'Specialization',
   'Full-stack development, Performance optimization, System design',
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 _buildQuickFact(
   context,
   'Companies',
@@ -297,19 +297,19 @@ _buildQuickFact(
   'Experience',
   'Self-taught Developer (5+ years building products)',
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 _buildQuickFact(
   context,
   'Background',
   'Physics → Self-taught → Professional Developer',
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 _buildQuickFact(
   context,
   'Focus',
   'Problem-solving, User-centric design, Clean code',
 ),
-const SizedBox(height: AppTheme.spacingMD),
+const SizedBox(height: AppTheme.spacingM),
 _buildQuickFact(
   context,
   'Contributions',

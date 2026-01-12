@@ -90,7 +90,7 @@ class HeroSection extends StatelessWidget {
                     OutlinedButton.icon(
                       onPressed: onContactMe,
                       icon: const Icon(Icons.mail_outline),
-                      label: const Text('Contact Me'),
+                      label: const Text('Contact'),
                     ),
                   ],
                 ),

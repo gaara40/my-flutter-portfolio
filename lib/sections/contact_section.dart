@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/helpers/url_launcher.dart';
 import '../theme/app_theme.dart';
 import '../widgets/section_heading.dart';
 
@@ -6,12 +7,16 @@ import '../widgets/section_heading.dart';
 /// Simple, clean layout with clear CTAs for reaching out.
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
 
     final year = DateTime.now().year;
+
+    final emailUrl = 'mailto:kumarpalukuru40@gmail.com';
+    final linkedInUrl = 'https://www.linkedin.com/in/pravin-palukuru';
+    final githubUrl = 'https://github.com/gaara40';
 
     return Container(
       width: double.infinity,
@@ -44,8 +49,18 @@ class ContactSection extends StatelessWidget {
                   ),
                 ),
                 child: isMobile
-                    ? _buildMobileLayout(context)
-                    : _buildDesktopLayout(context),
+                    ? _buildMobileLayout(
+                        context,
+                        emailUrl,
+                        linkedInUrl,
+                        githubUrl,
+                      )
+                    : _buildDesktopLayout(
+                        context,
+                        emailUrl,
+                        linkedInUrl,
+                        githubUrl,
+                      ),
               ),
 
               const SizedBox(height: AppTheme.spacingXXL),
@@ -68,7 +83,12 @@ class ContactSection extends StatelessWidget {
     );
   }
 
-  Widget _buildDesktopLayout(BuildContext context) {
+  Widget _buildDesktopLayout(
+    BuildContext context,
+    String emailUrl,
+    String linkedInUrl,
+    String githubUrl,
+  ) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -77,27 +97,32 @@ class ContactSection extends StatelessWidget {
           Icons.email_outlined,
           'Email',
           'kumarpalukuru40@gmail.com',
-          'mailto:kumarpalukuru40@gmail.com',
+          emailUrl,
         ),
         _buildContactMethod(
           context,
           Icons.language,
           'LinkedIn',
           'linkedin.com/in/pravin-palukuru',
-          'https://www.linkedin.com/in/pravin-palukuru',
+          linkedInUrl,
         ),
         _buildContactMethod(
           context,
           Icons.code,
           'GitHub',
           'github.com/gaara40',
-          'https://github.com/gaara40',
+          githubUrl,
         ),
       ],
     );
   }
 
-  Widget _buildMobileLayout(BuildContext context) {
+  Widget _buildMobileLayout(
+    BuildContext context,
+    String emailUrl,
+    String linkedInUrl,
+    String githubUrl,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -105,24 +130,24 @@ class ContactSection extends StatelessWidget {
           context,
           Icons.email_outlined,
           'Email',
-          'hello@example.com',
-          'mailto:hello@example.com',
+          'kumarpalukuru40@gmail.com',
+          emailUrl,
         ),
         const SizedBox(height: AppTheme.spacingXXL),
         _buildContactMethod(
           context,
           Icons.language,
           'LinkedIn',
-          'linkedin.com/in/yourname',
-          'https://linkedin.com/in/yourname',
+          'linkedin.com/in/pravin-palukuru',
+          linkedInUrl,
         ),
         const SizedBox(height: AppTheme.spacingXXL),
         _buildContactMethod(
           context,
           Icons.code,
           'GitHub',
-          'github.com/yourname',
-          'https://github.com/yourname',
+          'github.com/gaara40',
+          githubUrl,
         ),
       ],
     );
@@ -154,8 +179,7 @@ class ContactSection extends StatelessWidget {
           cursor: SystemMouseCursors.click,
           child: GestureDetector(
             onTap: () {
-              // In a real app, use url_launcher
-              // launchUrl(Uri.parse(url));
+              urlLauncher(url);
             },
             child: Text(
               value,

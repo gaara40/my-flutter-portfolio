@@ -5,7 +5,7 @@ import '../widgets/section_heading.dart';
 /// Resume section with download button and optional PDF viewer placeholder.
 /// Clean, minimal design focusing on the call-to-action.
 class ResumeSection extends StatelessWidget {
-  const ResumeSection();
+  const ResumeSection({super.key});
 
   @override
   Widget build(BuildContext context) {

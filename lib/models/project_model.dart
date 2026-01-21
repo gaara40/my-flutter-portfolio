@@ -18,22 +18,25 @@ class ProjectModel {
   });
 }
 
-/// Sample projects for the portfolio.
-/// Replace with your own projects.
+// My portfolio projects data
 class ProjectData {
   static final List<ProjectModel> projects = [
     ProjectModel(
-      title: 'Snibbl - Poetry & Micro-Story Social Platform',
+      title: 'Snibbl – Poetry & Micro-Story Social Platform',
       description:
-          'A creative social platform for poets and micro-storytellers to share their work. \nFeatures email/password and Google Sign-In authentication, guest login mode for casual readers, real-time poem feed with likes, comments, and saves. \nIntegrated push notifications alert users when their posts receive engagement.',
+          'Snibbl is a Flutter-based social platform designed around short-form poetry and micro-stories.\n'
+          'It supports user accounts and guest access, real-time content updates, and engagement features such as likes, comments, and saves.\n'
+          'The project focuses on delivering a clean, distraction-free reading experience while handling dynamic content and user interaction.',
+
       technologies: [
         'Flutter',
         'Dart',
-        'Firebase Auth',
-        'Firestore',
-        'Cloud Messaging',
+        'Firebase Authentication',
+        'Cloud Firestore',
+        'Firebase Cloud Messaging',
         'Riverpod',
       ],
+
       githubUrl: 'https://github.com/gaara40/snibbl',
       demoUrl: null,
       imageUrl: null,
@@ -41,15 +44,18 @@ class ProjectData {
     ProjectModel(
       title: 'QuickBill - Invoicing & Inventory Management App ',
       description:
-          'An intuitive invoicing and inventory management app designed for small business owners. \nGenerates professional invoices with customer details and auto-calculated totals, manages stock in real-time, and provides a comprehensive sales dashboard. \nFirebase integration ensures data persistence and accessibility across devices.',
+          'QuickBill is a Flutter-based invoicing and inventory management application designed for small businesses and shop owners.\n'
+          'The app supports inventory tracking, invoice generation, sales history, and business insights through a centralized dashboard.\n'
+          'It focuses on handling structured business data, real-time updates, and persistent records using cloud-backed storage.',
+
       technologies: [
         'Flutter',
         'Dart',
+        'Firebase Authentication',
+        'Cloud Firestore',
         'Riverpod',
-        'Firebase',
-        'Firestore',
-        'Cloud Storage',
       ],
+
       githubUrl: 'https://github.com/gaara40/QuickBill',
       demoUrl: null,
       imageUrl: null,
@@ -57,8 +63,11 @@ class ProjectData {
     ProjectModel(
       title: 'Expense Tracker',
       description:
-          'A beautifully designed expense tracking app with intuitive category management and visual spending insights. \nFeatures local data persistence using Hive, category-wise bar charts for analysis, multiple sort options, and undo functionality for accidental deletions. \nMinimal UI focuses on clarity and ease of use.',
-      technologies: ['Flutter', 'Dart', 'Hive', 'Provider', 'Material Design'],
+          'Expense Tracker is a Flutter application for recording and analyzing daily spending\n'
+          'The app supports categorizing expenses, visualizing spending patterns, and managing records through sorting and editing features.\n'
+          'It emphasizes local data persistence, responsive interactions, and a clean interface for handling personal finance data.',
+
+      technologies: ['Flutter', 'Dart', 'Hive', 'Provider'],
       githubUrl: 'https://github.com/gaara40/ExpenseTracker',
       demoUrl: null,
       imageUrl: null,

@@ -65,13 +65,13 @@ class AboutSection extends StatelessWidget {
   List<Widget> _buildContent(BuildContext context) {
     return [
       Text(
-        'I’m a mobile developer working primarily with Flutter and Android, focused on building clean, reliable, and user-friendly applications. I enjoy working across the full development flow from designing responsive UI to integrating APIs and cloud-backed features.',
+        'I’m a mobile developer working primarily with Flutter and Android, with a strong focus on clean user interfaces and practical, well-structured code. I enjoy taking features from idea to implementation, working through UI details, API integration, and edge cases that show up in real usage.',
 
         style: Theme.of(context).textTheme.bodyLarge,
       ),
       const SizedBox(height: AppTheme.spacingL),
       Text(
-        'My interest in development started with curiosity about how products are built and scaled. Over time, I’ve worked on real-world applications where maintainability, performance, and collaboration matter just as much as features. I value writing clear code, thinking through edge cases, and building things that are easy to evolve over time.',
+        'I care about how applications hold up over time, not just how quickly features are implemented. Maintainability, performance, and clarity guide the way I write code, with close attention to edge cases and long-term usability. I’m comfortable working within existing codebases and structuring features so they remain easy to understand, test, and extend as the product grows.',
         style: Theme.of(context).textTheme.bodyLarge,
       ),
       // const SizedBox(height: AppTheme.spacingL),

@@ -67,7 +67,7 @@ class HeroSection extends StatelessWidget {
                 SizedBox(
                   width: isMobile ? double.infinity : 600,
                   child: Text(
-                    'Mobile developer building cross-platform applications with Flutter.',
+                    'Developing production-ready applications with Flutter, focused on clean UI, scalable code, and real-world features.',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       height: 1.8,
                       color: Theme.of(context).colorScheme.onSurface,

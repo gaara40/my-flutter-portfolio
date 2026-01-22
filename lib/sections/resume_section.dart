@@ -13,7 +13,7 @@ class ResumeSection extends StatelessWidget {
     final isMobile = MediaQuery.of(context).size.width < 768;
 
     final pdfUrl =
-        'https://raw.githubusercontent.com/gaara40/my-flutter-portfolio/5578a17ce66a6b4d0aaf6a63e61944d8aa701ac6/assets/pdf/Pravinkumar_Resume.pdf';
+        'https://raw.githubusercontent.com/gaara40/my-flutter-portfolio/82bdf9e29fc114ce31c7fcc6d002c432b96d59a7/assets/pdf/Pravinkumar_Resume.pdf';
 
     return Container(
       width: double.infinity,
